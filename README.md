@@ -11,7 +11,7 @@ copr repository available at: https://copr.fedorainfracloud.org/coprs/almac/jmc-
 `$ fedpkg srpm`
 
 optionally, can create a Fedora version-specific srpm:
-`$fedpkg --release f33 srpm` would create a srpm for Fedora 33
+`$ fedpkg --release f33 srpm` would create a srpm for Fedora 33
 
 ### Building the package locally (mock)
 If I'm looking to create a mock build for Fedora 33 using the first iteration of this package, my command might look something like:</br>
