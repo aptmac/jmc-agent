@@ -57,8 +57,7 @@ This package contains javadoc for %{summary}.
 
 %patch0 -p1
 
-cp ../license/* ./
-cp ../README.md ./
+cp ./license/* ./
 
 %pom_remove_plugin :maven-enforcer-plugin
 %pom_remove_plugin :maven-failsafe-plugin
@@ -82,5 +81,5 @@ cp ../README.md ./
 %doc README.md
 
 %changelog
-* Wed Dec 01 2021 Alex Macdonald <almacdon@redhat.com> - 1.0.1-1
+* Fri Dec 03 2021 Alex Macdonald <almacdon@redhat.com> - 1.0.1-1
 - Initial package
