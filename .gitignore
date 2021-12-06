@@ -1,3 +1,9 @@
-jmc-agent-*.src.rpm
+# downloaded sources
 8.1.1-ga.tar.gz
-8.1.1-ga
+
+# extracted jmc directory
+jmc-*-ga
+
+# rpms
+jmc-agent-*.src.rpm
+jmc-agent-*.noarch.rpm
