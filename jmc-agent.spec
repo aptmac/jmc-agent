@@ -33,6 +33,7 @@ Source0:  https://github.com/openjdk/jmc/archive/refs/tags/%{jmc_version}.tar.gz
 BuildArch:  noarch
 
 BuildRequires:  maven-local
+BuildRequires:  maven-shade-plugin
 BuildRequires:  mvn(junit:junit)
 BuildRequires:  mvn(org.ow2.asm:asm)
 BuildRequires:  mvn(org.ow2.asm:asm-commons)
@@ -61,7 +62,6 @@ cp ./license/* ./
 
 %pom_remove_plugin :maven-enforcer-plugin
 %pom_remove_plugin :maven-failsafe-plugin
-%pom_remove_plugin :maven-shade-plugin
 %pom_remove_plugin :nexus-staging-maven-plugin
 
 %build
@@ -81,5 +81,5 @@ cp ./license/* ./
 %doc README.md
 
 %changelog
-* Fri Dec 03 2021 Alex Macdonald <almacdon@redhat.com> - 1.0.1-1
+* Mon Dec 06 2021 Alex Macdonald <almacdon@redhat.com> - 1.0.1-1
 - Initial package
