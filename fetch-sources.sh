@@ -1,7 +1,8 @@
 #!/bin/bash
 
 VERSION=8.1.1-ga
-URL=https://github.com/openjdk/jmc/archive/refs/tags/$VERSION.tar.gz
+TARBALL_NAME=$VERSION.tar.gz
+URL=https://github.com/openjdk/jmc/archive/refs/tags/$TARBALL_NAME
 
 # if a jmc tarball already exists, remove it prior to downloading a new one
 if [ -f $TARBALL_NAME ]; then

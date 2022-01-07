@@ -4,7 +4,7 @@
 %global patchlevel 1
 
 # Revision
-%global revnum 1
+%global revnum 2
 # set to 1 for snapshots, 0 for release
 %global usesnapshot 0
 
@@ -32,12 +32,11 @@ Source0:  https://github.com/openjdk/jmc/archive/refs/tags/%{jmc_version}.tar.gz
 
 BuildArch:  noarch
 
+BuildRequires:  java-11-openjdk-devel
+BuildRequires:  junit
 BuildRequires:  maven-local
 BuildRequires:  maven-shade-plugin
-BuildRequires:  mvn(junit:junit)
-BuildRequires:  mvn(org.ow2.asm:asm)
-BuildRequires:  mvn(org.ow2.asm:asm-commons)
-BuildRequires:  mvn(org.ow2.asm:asm-util)
+BuildRequires:  objectweb-asm >= 8.0.0-1
 
 # On F35 onward, surefire requires Xmx1024m to avoid the VM from crashing during tests
 Patch0:  0-increase-surefire-memory.patch
@@ -81,5 +80,8 @@ cp ./license/* ./
 %doc README.md
 
 %changelog
+* Thu Jan 06 2022 Alex Macdonald <almacdon@redhat.com> - 1.0.1-2
+- Added build requires on jdk 11 and version requirement on objectweb-asm
+
 * Mon Dec 06 2021 Alex Macdonald <almacdon@redhat.com> - 1.0.1-1
 - Initial package
